@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OD Letter</title>
+    <style>
+    @media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  
+  body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+  }
+  
+  /* Additional styles for proper page formatting */
+  /* ... */
+  
+  .print-content {
+    /* Default styles */
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main print-content">
+        <div class="title">
+          <h1>OD LETTER</h1>
+        </div>
+        <div class="date">
+          <p>Date: <span id="currentDate"></span></p>
+        </div>
+        <div class="detail">
+          <ul>
+            <li class="from-main">From</li>
+            <li> <span id="name">Name:</span></li>
+            <li> <span id="department1">Department:</span></li>
+            <li>SNS college of engineering</li>
+            <li>Coimbatore - 641 107</li>
+          </ul>
+        </div>
+        <div class="detail">
+          <ul>
+            <li class="from-main">To</li>
+            <li><span>Head of Department</span></li>
+            <li><span id="department2">Department: </span></li>
+            <li>SNS college of engineering</li>
+            <li>Coimbatore - 641 107</li>
+          </ul>
+        </div>
+        <div class="sub">
+          <p><strong>Subject:</strong> Request for On-Duty Leave for College Event</p>
+        </div>
+        <div class="resp">
+          <h3>Respected Mam,</h3>
+        </div>
+        <div class="para">
+          <p>
+            I am writing to request on-duty leave to participate in the <span id="event1">Event Name</span> organized by
+            <span id="college1">College Name</span>. The event is scheduled to take place from
+            <span id="start_day">Event Start Date</span> to <span id="end_day">Event End Date</span>.
+          </p>
+          <p>
+            I kindly request your approval for on-duty leave during the specified period to participate in the
+            <span id="event2">Event Name</span>. I am confident that this experience will not only contribute to my
+            personal growth but also reflect positively on our department and university.
+          </p>
+          <p>Thank you for considering my request. Your support and understanding are sincerely appreciated.</p>
+        </div>
+        <div class="st-sign">
+          <p>Your Sincerely,</p>
+        </div>
+
+        <div class="event_detail">
+            <ul>
+              <li><Strong style="margin-right: 5px;">College Name:</Strong><span id="college2"></span></li>
+              <li><Strong style="margin-right: 5px;">Event Name:</Strong><span id="event3"></span></li>
+              <li><Strong style="margin-right: 5px;">No of Days :</Strong><span id="days"></span></li>
+            </ul>
+        </div>
+
+
+        <div class="staff-sign">
+          <ul>
+            <li><input type="checkbox">Parent:</li><br>
+            <li>Tutor:</li><br>
+            <li>Mentor:</li><br>
+            <li>HOD:</li><br>
+          </ul>
+        </div>
+        <div class="btn">
+          <button id="downloadButton" onclick="downloadConfirmationLetter()">Print</button>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.10.2/jspdf.umd.min.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+              const formData = JSON.parse(sessionStorage.getItem('formData'));
+
+              document.getElementById('name').innerText = formData['name'];
+              document.getElementById('department1').innerText = formData['department'];
+              document.getElementById('department2').innerText = formData['department'];
+              document.getElementById('college1').innerText = formData['college'];
+              document.getElementById('college2').innerText = formData['college'];
+              document.getElementById('college2').innerText = formData['college'];
+              document.getElementById('event1').innerText = formData['event'];
+              document.getElementById('event2').innerText = formData['event'];
+              document.getElementById('event3').innerText = formData['event'];
+              document.getElementById('start_day').innerText = formData['start_day'];
+              document.getElementById('end_day').innerText = formData['end_day'];
+              document.getElementById('days').innerText = formData['days'];
+
+              sessionStorage.removeItem('formData');
+            });
+
+           
+        </script>
+        <script src="./script.js"></script>
+   
+    </section>
+</body>
+</html>

@@ -1,0 +1,151 @@
+// *{
+//     border: 2px solid #000;
+// }
+
+body{
+    margin: 0;
+    padding: 0;
+
+}
+.main{
+    border: 2px solid #000;
+    margin: 20px;
+    max-width:3508px ;
+    max-height: 2480px;
+    
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 1.5rem;
+            text-align: center;
+
+        }
+       
+    }
+    .date{
+        display: flex;
+        justify-content: end;
+        p{
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+    }
+    .detail{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        ul{
+            list-style: none;
+            li{
+                font-size: 1rem;
+                margin-left: 5px;
+                padding: 2px 0px;
+            }
+            .from-main{
+                margin-bottom: 20px;
+                font-size: 1rem;
+                font-weight: 800;
+                margin-left: 0px;
+            }
+        }
+    }
+    .sub{
+        margin: 40px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        p{
+            font-size: 1rem;
+        }
+    }
+
+    .resp{
+        margin: 40px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        h3{
+            font-size: 1rem;
+        }
+    }
+    .para{
+        margin: 40px;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        p{
+            font-size: 1rem;
+            padding: 2px;
+            text-align: justify;
+        }
+    }
+    .st-sign{
+        margin: 40px;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        flex-direction: column;
+        p{
+            font-size: 1rem;
+            padding: 2px; 
+        }
+    }
+
+    .event_detail{
+        margin: 40px;
+        margin-top: -100px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        ul{
+            list-style: none;
+            li{
+                font-size: 1rem;
+                padding: 10px;
+                text-align: justify;
+
+            }
+        }
+    }
+
+
+
+    .staff-sign{
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        ul{
+            width: 100%;
+            list-style: none;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-evenly;
+
+            
+            
+            li{
+                padding: 2px;
+            }
+            
+        }
+        
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            padding: 1px 3px;
+            font-size: 1.5rem;
+            margin-bottom: 1px;
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+

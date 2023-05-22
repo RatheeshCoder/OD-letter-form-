@@ -1,0 +1,79 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <form id="myForm">
+  
+    <h1>OD Form </h1>
+    
+    <fieldset>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="collegeID">College ID:</label>
+      <input type="text" id="collegeID" name="collegeID" required>
+      
+      <label for="mail">Department</label>
+      <input type="text" id="department" name="department" required>
+      
+      <label for="college_name">Going College Name</label>
+      <input type="text"id="college" name="college" required>
+
+      <label for="event_name">Event Name</label>
+      <input type="text" id="event" name="event" required>
+
+      <label for="Start_date">Event Starting Date</label>
+      <input type="text"  id="start_day" name="start_day" required>
+
+      <label for="End_date">Event Ending Date</label>
+      <input type="text"  id="end_day" name="end_day" required>
+
+      <label for="days">Number of Days</label>
+      <input type="text"  id="days" name="days" required>
+      
+       </fieldset>
+    
+ 
+    <button type="submit" value="Submit">Submit</button>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#myForm").submit(function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var formData = {
+          name: $("#name").val(),
+          collegeID: $("#collegeID").val(),
+          department: $("#department").val(),
+          college: $("#college").val(),
+          event: $("#event").val(),
+          start_day: $("#start_day").val(),
+          end_day: $("#end_day").val(),
+          days: $("#days").val()
+        };
+
+        $.ajax({
+          url: "https://script.google.com/macros/s/AKfycbycXgtDZPuU6EwkGAZ_YPEUF--WFjHoK3NwMNI-ZgsQFULZKW-2dFJYrbkwcNAYsWyl/exec", // Replace with your Google Apps Script URL
+          type: "POST",
+          data: formData,
+          success: function(response) {
+            sessionStorage.setItem('formData', JSON.stringify(formData));
+            window.location.href = 'demo.html';
+          },
+          error: function(xhr, status, error) {
+            console.log(error);
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>

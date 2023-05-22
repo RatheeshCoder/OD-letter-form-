@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  border: 2px solid #000;
+  margin: 20px;
+  max-width: 3508px;
+  max-height: 2480px;
+}
+.main .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .title h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.main .date {
+  display: flex;
+  justify-content: end;
+}
+.main .date p {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.main .detail {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.main .detail ul {
+  list-style: none;
+}
+.main .detail ul li {
+  font-size: 1rem;
+  margin-left: 5px;
+  padding: 2px 0px;
+}
+.main .detail ul .from-main {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-left: 0px;
+}
+.main .sub {
+  margin: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.main .sub p {
+  font-size: 1rem;
+}
+.main .resp {
+  margin: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.main .resp h3 {
+  font-size: 1rem;
+}
+.main .para {
+  margin: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+.main .para p {
+  font-size: 1rem;
+  padding: 2px;
+  text-align: justify;
+}
+.main .st-sign {
+  margin: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+}
+.main .st-sign p {
+  font-size: 1rem;
+  padding: 2px;
+}
+.main .event_detail {
+  margin: 40px;
+  margin-top: -100px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.main .event_detail ul {
+  list-style: none;
+}
+.main .event_detail ul li {
+  font-size: 1rem;
+  padding: 10px;
+  text-align: justify;
+}
+.main .staff-sign {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.main .staff-sign ul {
+  width: 100%;
+  list-style: none;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.main .staff-sign ul li {
+  padding: 2px;
+}
+.main .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .btn button {
+  padding: 1px 3px;
+  font-size: 1.5rem;
+  margin-bottom: 1px;
+  background-color: #000;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
