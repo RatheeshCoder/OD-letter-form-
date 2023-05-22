@@ -5,7 +5,6 @@ body {
 
 .main {
   border: 2px solid #000;
-  margin: 20px;
   max-width: 3508px;
   max-height: 2480px;
 }
@@ -129,4 +128,55 @@ body {
   margin-bottom: 1px;
   background-color: #000;
   color: #fff;
+}
+
+/* CSS for responsive design */
+@media screen and (max-width: 767px) {
+  .detail {
+    display: block !important;
+    margin-bottom: 10px;
+  }
+  .detail ul li {
+    display: block !important;
+  }
+  .sub p {
+    font-size: 16px;
+  }
+  .resp h3 {
+    font-size: 20px;
+  }
+  .para p {
+    font-size: 16px;
+  }
+  .event_detail ul li {
+    font-size: 16px;
+  }
+  .staff-sign ul li {
+    display: inline-block !important;
+    margin-right: 10px;
+  }
+}
+/* Additional media query for 360px */
+@media screen and (max-width: 360px) {
+  .title h1 {
+    font-size: 24px;
+  }
+  .date p {
+    font-size: 14px;
+  }
+  .detail ul li {
+    font-size: 12px;
+  }
+  .sub p {
+    font-size: 14px;
+  }
+  .resp h3 {
+    font-size: 18px;
+  }
+  .para p {
+    font-size: 14px;
+  }
+  .event_detail ul li {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */
